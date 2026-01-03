@@ -1,0 +1,193 @@
+/* Admin Page Custom CSS */
+.rsl-admin-wrap {
+    max-width: 1100px;
+    margin: 20px auto 50px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.rsl-header {
+    margin-bottom: 20px;
+}
+.rsl-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1d2327;
+    margin: 0;
+}
+
+/* LAYOUT GRID SYSTEM */
+.rsl-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+    align-items: start;
+}
+
+/* Responsive: Stack columns on mobile/tablet */
+@media (max-width: 900px) {
+    .rsl-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARDS */
+.rsl-card {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #dcdcde;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    padding: 25px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.rsl-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f1;
+    color: #50575e;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.rsl-card-title .dashicons {
+    color: #2271b1;
+}
+
+/* FORM ELEMENTS */
+.rsl-form-group {
+    margin-bottom: 15px;
+}
+.rsl-form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #1d2327;
+}
+.rsl-input-full {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.rsl-helper {
+    font-size: 12px;
+    color: #8c8f94;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Row for Colors & Alignment inside Appearance Card */
+.rsl-flex-row {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+}
+.rsl-flex-col { flex: 1; }
+
+/* RESPONSIVE SETTINGS GRID */
+.rsl-resp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+.rsl-resp-card {
+    background: #fcfcfc;
+    border: 1px solid #e2e4e7;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.2s;
+}
+.rsl-resp-card:hover {
+    border-color: #2271b1;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.rsl-resp-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #1d2327;
+}
+.rsl-resp-input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #50575e;
+}
+.rsl-resp-input-group input {
+    width: 60px;
+    text-align: center;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* SOCIAL ICONS LIST */
+.rsl-social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.rsl-social-row {
+    display: flex;
+    align-items: center;
+    background: #fafafa;
+    border: 1px solid #f0f0f1;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+.rsl-social-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.rsl-social-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+}
+
+.rsl-input-wrap { flex: 1; }
+.rsl-input-wrap input {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/* --- STICKY SAVE BAR --- */
+.rsl-save-bar {
+    position: sticky;
+    bottom: 20px;
+    background: #fff;
+    padding: 12px 25px;
+    border-top: 1px solid #dcdcde;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}

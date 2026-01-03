@@ -1,0 +1,120 @@
+/* Wrapper */
+#rslclwifw-livechat-wrapper {
+    position: fixed;
+    z-index: 99999999;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Button */
+.rslclwifw-main-btn {
+    width: 60px;
+    height: 60px;
+    background-color: var(--rslclwifw-bg, #e74c3c);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 10;
+    
+    /* Smooth Transition for Button */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
+    
+    animation: rslclwifw-pulse 2s infinite;
+    -webkit-tap-highlight-color: transparent;
+}
+.rslclwifw-main-btn:hover { transform: scale(1.1); }
+
+/* Main Icon Image */
+.rsl-custom-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+}
+
+/* Social Links Container */
+.rslclwifw-social-links {
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 12px;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+}
+
+/* Active State */
+#rslclwifw-livechat-wrapper.rslclwifw-active .rslclwifw-social-links {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+/* Individual Items (Small Circles) */
+.rslclwifw-item {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    text-decoration: none;
+    
+    /* KEY FIX: Smooth Transition Logic */
+    transform: scale(1);
+    transform-origin: center center;
+    /* Use 'all' or 'transform' with a smoother timing function */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    will-change: transform;
+    
+    margin: 0 auto;
+}
+
+/* Scale Effect on Hover */
+.rslclwifw-item:hover { 
+    transform: scale(1.15); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Inner Icons */
+.rslclwifw-item img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none;
+}
+
+/* Colors */
+.rslclwifw-messenger { background-color: #0084FF; }
+.rslclwifw-whatsapp { background-color: #25D366; }
+.rslclwifw-telegram { background-color: #0088cc; }
+.rslclwifw-phone { background-color: #34495e; }
+
+/* Pulse Animation */
+@keyframes rslclwifw-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(var(--rslclwifw-bg-rgb, 231, 76, 60), 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(var(--rslclwifw-bg-rgb, 231, 76, 60), 0); }
+    100% { box-shadow: 0 0 0 0 rgba(var(--rslclwifw-bg-rgb, 231, 76, 60), 0); }
+}
