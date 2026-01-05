@@ -10,4 +10,5 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 delete_option( 'rslclwifw_options' );
+
 ?>
